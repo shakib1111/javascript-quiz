@@ -1,5 +1,6 @@
 const correctAnswers = ['D','C','C','A','B','D','A','A','B','A'];
 const form=document.querySelector('.quiz-form');
+const result=document.querySelector('.result');
 
 form.addEventListener('submit', e =>{
     e.preventDefault();
@@ -18,6 +19,7 @@ form.addEventListener('submit', e =>{
         
     });
 
-    console.log(score)
+    result.querySelector('span').textContent=`${score}%`;
+    result.classList.remove('d-none');
    
 });
